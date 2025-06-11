@@ -1,0 +1,273 @@
+---
+
+---
+
+<aside 
+  id="sidebar" 
+  class="fixed top-17 left-0 z-30 h-[calc(100vh-4rem)] transition-transform -translate-x-full bg-white border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700 w-64"
+  aria-label="Sidebar"
+>
+<div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+<ul class="space-y-2 font-medium">
+
+<!-- Dashboard -->
+<li>
+    <button id="dashButton" class="cursor-pointer flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group" active-class="bg-gray-100 dark:bg-gray-700">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      </svg>
+      <span class="ml-3">Dashboard</span>
+    </button>
+</li>
+
+<!--Estadistícas -->
+<li>
+    <button id="staticButton" class="cursor-pointer flex items-center w-full p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      </svg>
+      <span class="ml-3">Estadísticas</span>
+    </button>
+</li>
+
+<!-- Productos -->
+<li>
+    <button type="button" class="cursor-pointer flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-productos" data-collapse-toggle="dropdown-productos">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+      </svg>
+      <span class="flex-1 ml-3 text-left whitespace-nowrap">Productos</span>
+      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+      </svg>
+    </button>
+    <ul id="dropdown-productos" class="hidden py-2 space-y-2">
+      <li>
+        <button id="allProductsButton" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Todos los productos</button>
+      </li>
+      <li>
+        <button id="newProductButton" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Nuevos productos</button>
+      </li>
+      <li>
+        <button id="categoriesButton" class="cursor-pointer flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown-categorias" data-collapse-toggle="dropdown-categorias">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-white" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 11.6458V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V11.6458C2.37764 10.9407 2 10.0144 2 9V3C2 2.44772 2.44772 2 3 2H21C21.5523 2 22 2.44772 22 3V9C22 10.0144 21.6224 10.9407 21 11.6458ZM19 12.874C18.6804 12.9562 18.3453 13 18 13C16.8053 13 15.7329 12.4762 15 11.6458C14.2671 12.4762 13.1947 13 12 13C10.8053 13 9.73294 12.4762 9 11.6458C8.26706 12.4762 7.19469 13 6 13C5.6547 13 5.31962 12.9562 5 12.874V20H19V12.874ZM14 9C14 8.44772 14.4477 8 15 8C15.5523 8 16 8.44772 16 9C16 10.1046 16.8954 11 18 11C19.1046 11 20 10.1046 20 9V4H4V9C4 10.1046 4.89543 11 6 11C7.10457 11 8 10.1046 8 9C8 8.44772 8.44772 8 9 8C9.55228 8 10 8.44772 10 9C10 10.1046 10.8954 11 12 11C13.1046 11 14 10.1046 14 9Z"></path>
+          </svg>
+          <span class="flex-1 ml-3 text-left whitespace-nowrap">Categorías</span>
+          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+          </svg>
+        </button>
+        <ul id="dropdown-categorias" class="hidden py-2 space-y-2">
+            <li>
+              <button id="sneakersButton" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Zapatillas</button>
+            </li>
+            <li>
+              <button id="clothesButton" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Vestidos</button>
+            </li>
+            <li>
+              <button id="sweatersButton" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Chompas</button>
+            </li>
+        </ul>
+      </li>
+    </ul>
+</li>
+
+<!-- Pedidos -->
+<li>
+    <button id="ordersButton" class="cursor-pointer flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+      </svg>
+      <span class="ml-3">Pedidos</span>
+    </button>
+</li>
+
+<!-- Clientes -->
+<li>
+    <button id="clientsButton" class="cursor-pointer flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+      </svg>
+      <span class="ml-3">Clientes</span>
+    </button>
+</li>
+
+<!-- Sunat -->
+<li>
+    <button id="sunatButton" class="cursor-pointer flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-white" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M13 21V23.5L10 21.5L7 23.5V21H6.5C4.567 21 3 19.433 3 17.5V5C3 3.34315 4.34315 2 6 2H20C20.5523 2 21 2.44772 21 3V20C21 20.5523 20.5523 21 20 21H13ZM13 19H19V16H6.5C5.67157 16 5 16.6716 5 17.5C5 18.3284 5.67157 19 6.5 19H7V17H13V19ZM19 14V4H6V14.0354C6.1633 14.0121 6.33024 14 6.5 14H19ZM7 5H9V7H7V5ZM7 8H9V10H7V8ZM7 11H9V13H7V11Z"></path>
+      </svg>
+      <span class="ml-3">Sunat</span>
+    </button>
+</li>
+
+<!-- Configuración -->
+<li>
+    <button id="configButton" class="cursor-pointer flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+      <span class="ml-3">Configuración</span>
+    </button>
+</li>
+</ul>
+</div>
+</aside>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const staticButton = document.getElementById('staticButton');
+    const dashButton = document.getElementById('dashButton');
+    const ordersButton = document.getElementById('ordersButton');
+    const clientsButton = document.getElementById('clientsButton');
+    const configButton = document.getElementById('configButton');
+    const sunatButton = document.getElementById('sunatButton');
+    const allProductsButton = document.getElementById('allProductsButton');
+    const newProductButton = document.getElementById('newProductButton');
+    const categoriesButton = document.getElementById('categoriesButton');
+    const sneakersButton = document.getElementById('sneakersButton');
+    const clothesButton = document.getElementById('clothesButton');
+    const sweatersButton = document.getElementById('sweatersButton');
+
+    staticButton.addEventListener('click', () => {
+      if (window.changeDynamicComponent) {
+        window.changeDynamicComponent('Statics');
+      }
+      document.querySelectorAll('#sidebar a, #sidebar button').forEach(el => {
+        el.classList.remove('bg-gray-100', 'dark:bg-gray-700');
+      });
+      staticButton.classList.add('bg-gray-100', 'dark:bg-gray-700');
+    });
+
+    dashButton.addEventListener('click', () => {
+      if (window.changeDynamicComponent) {
+        window.changeDynamicComponent('Home');
+      }
+      document.querySelectorAll('#sidebar a, #sidebar button').forEach(el => {
+        el.classList.remove('bg-gray-100', 'dark:bg-gray-700');
+      });
+      dashButton.classList.add('bg-gray-100', 'dark:bg-gray-700');
+    });
+
+    ordersButton.addEventListener('click', () => {
+      if (window.changeDynamicComponent) {
+        window.changeDynamicComponent('Orders');
+      }
+      document.querySelectorAll('#sidebar a, #sidebar button').forEach(el => {
+        el.classList.remove('bg-gray-100', 'dark:bg-gray-700');
+      });
+      ordersButton.classList.add('bg-gray-100', 'dark:bg-gray-700');
+    });
+
+    clientsButton.addEventListener('click', () => {
+      if (window.changeDynamicComponent) {
+        window.changeDynamicComponent('Clients');
+      }
+      document.querySelectorAll('#sidebar a, #sidebar button').forEach(el => {
+        el.classList.remove('bg-gray-100', 'dark:bg-gray-700');
+      });
+      clientsButton.classList.add('bg-gray-100', 'dark:bg-gray-700');
+    });
+
+    configButton.addEventListener('click', () => {
+      if (window.changeDynamicComponent) {
+        window.changeDynamicComponent('Config');
+      }
+      document.querySelectorAll('#sidebar a, #sidebar button').forEach(el => {
+        el.classList.remove('bg-gray-100', 'dark:bg-gray-700');
+      });
+      configButton.classList.add('bg-gray-100', 'dark:bg-gray-700');
+    });
+
+    sunatButton.addEventListener('click', () => {
+      if (window.changeDynamicComponent) {
+        window.changeDynamicComponent('Sunat');
+      }
+      document.querySelectorAll('#sidebar a, #sidebar button').forEach(el => {
+        el.classList.remove('bg-gray-100', 'dark:bg-gray-700');
+      });
+      sunatButton.classList.add('bg-gray-100', 'dark:bg-gray-700');
+    });
+
+    allProductsButton.addEventListener('click', () => {
+      if (window.changeDynamicComponent) {
+        window.changeDynamicComponent('allProducts');
+      }
+      document.querySelectorAll('#sidebar a, #sidebar button').forEach(el => {
+        el.classList.remove('bg-gray-100', 'dark:bg-gray-700');
+      });
+      allProductsButton.classList.add('bg-gray-100', 'dark:bg-gray-700');
+    });
+
+    newProductButton.addEventListener('click', () => {
+      if (window.changeDynamicComponent) {
+        window.changeDynamicComponent('NewProduct');
+      }
+      document.querySelectorAll('#sidebar a, #sidebar button').forEach(el => {
+        el.classList.remove('bg-gray-100', 'dark:bg-gray-700');
+      });
+      newProductButton.classList.add('bg-gray-100', 'dark:bg-gray-700');
+    });
+    categoriesButton.addEventListener('click', () => {
+      if (window.changeDynamicComponent) {
+        window.changeDynamicComponent('Categories');
+      }
+      document.querySelectorAll('#sidebar a, #sidebar button').forEach(el => {
+        el.classList.remove('bg-gray-100', 'dark:bg-gray-700');
+      });
+      categoriesButton.classList.add('bg-gray-100', 'dark:bg-gray-700');
+    });
+    sneakersButton.addEventListener('click', () => {
+      if (window.changeDynamicComponent) {
+        window.changeDynamicComponent('Sneakers');
+      }
+      document.querySelectorAll('#sidebar a, #sidebar button').forEach(el => {
+        el.classList.remove('bg-gray-100', 'dark:bg-gray-700');
+      });
+      sneakersButton.classList.add('bg-gray-100', 'dark:bg-gray-700');
+    });
+    clothesButton.addEventListener('click', () => {
+      if (window.changeDynamicComponent) {
+        window.changeDynamicComponent('Clothes');
+      }
+      document.querySelectorAll('#sidebar a, #sidebar button').forEach(el => {
+        el.classList.remove('bg-gray-100', 'dark:bg-gray-700');
+      });
+      clothesButton.classList.add('bg-gray-100', 'dark:bg-gray-700');
+    });
+    sweatersButton.addEventListener('click', () => {
+      if (window.changeDynamicComponent) {
+        window.changeDynamicComponent('Sweaters');
+      }
+      document.querySelectorAll('#sidebar a, #sidebar button').forEach(el => {
+        el.classList.remove('bg-gray-100', 'dark:bg-gray-700');
+      });
+      sweatersButton.classList.add('bg-gray-100', 'dark:bg-gray-700');
+    });
+  });
+</script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Manejo de los menús desplegables
+    const dropdownToggles = document.querySelectorAll('[data-collapse-toggle]');
+    
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const targetId = toggle.getAttribute('data-collapse-toggle');
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          targetElement.classList.toggle('hidden');
+          
+          // Rotar el icono de flecha
+          const arrow = toggle.querySelector('svg:last-child');
+          if (arrow) {
+            arrow.classList.toggle('rotate-180');
+          }
+        }
+      });
+    });
+  });
+</script>

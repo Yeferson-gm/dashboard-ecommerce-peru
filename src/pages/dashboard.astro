@@ -1,0 +1,11 @@
+---
+import DashboardLayout from "../layouts/DashboardLayout.astro";
+import DynamicContent from '@/components/vue/optionsDynamic.vue';
+---
+
+<DashboardLayout title="Panel de Control">
+
+	<div id="dynamic-content">
+		<DynamicContent client:load />
+	</div>
+</DashboardLayout>
